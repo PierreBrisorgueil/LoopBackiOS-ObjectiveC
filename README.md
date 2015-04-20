@@ -1,6 +1,6 @@
 # WeAreOpenSource.me
 
-## Sample-LoopBack-iOS_Node-Part
+## Sample-LoopBack-iOS_iOS-Part
 
 #### Introduction  
 

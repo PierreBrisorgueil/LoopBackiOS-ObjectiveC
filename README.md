@@ -11,7 +11,7 @@ IOS application sample, to question a node server (LoopBack). Simple sample for 
 You must have the [Node server](https://github.com/weareopensource/Sample-LoopBack-iOS_Node-Part) launched. 
 
     git clone https://github.com/weareopensource/Sample-LoopBack-iOS_iOS-Part.git
-    cd ./Sample-LoopBack-iOS_Node-Part
+    cd ./Sample-LoopBack-iOS_iOS-Part
     open Person.xcodeproj
 
 #### Questions ? 

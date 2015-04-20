@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Person collection-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="Person collection" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GoT-dX-Ad2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="501"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonCell" id="Hxg-um-L6T">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hxg-um-L6T" id="0vs-vM-hhj">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="AAp-LE-SZy"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="6Mm-Tf-eJW"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqS-dk-6Rq">
+                                <rect key="frame" x="256" y="531" width="89" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MeY-6d-3xx"/>
+                                </constraints>
+                                <state key="normal" title="Refresh Data">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionGetPerson:" destination="vXZ-lx-hvc" eventType="touchDown" id="BpC-7H-vZP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GoT-dX-Ad2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="NcE-jh-IYA"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="PqS-dk-6Rq" secondAttribute="bottom" constant="42" id="OKe-CK-FT3"/>
+                            <constraint firstAttribute="centerX" secondItem="PqS-dk-6Rq" secondAttribute="centerX" id="ZnM-xZ-NK4"/>
+                            <constraint firstItem="GoT-dX-Ad2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="dtY-cT-40Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GoT-dX-Ad2" secondAttribute="trailing" constant="-16" id="sov-eA-KBC"/>
+                            <constraint firstItem="PqS-dk-6Rq" firstAttribute="top" secondItem="GoT-dX-Ad2" secondAttribute="bottom" constant="27" id="t8P-8o-WC7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myTable" destination="GoT-dX-Ad2" id="lRx-Q6-ypy"/>
+                        <outlet property="tableView" destination="GoT-dX-Ad2" id="eAA-Br-O5b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

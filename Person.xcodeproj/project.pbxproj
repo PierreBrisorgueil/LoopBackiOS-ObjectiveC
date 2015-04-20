@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C02BECE1AE4D5850031BA27 /* LoopBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C02BECD1AE4D5850031BA27 /* LoopBack.framework */; };
+		2CA620F11AE4E1B500CB195F /* LoopBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA620F01AE4E1B500CB195F /* LoopBack.framework */; };
 		2CFC78B81AE3E9B000385526 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC78B71AE3E9B000385526 /* main.m */; };
 		2CFC78BB1AE3E9B000385526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC78BA1AE3E9B000385526 /* AppDelegate.m */; };
 		2CFC78BE1AE3E9B000385526 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC78BD1AE3E9B000385526 /* ViewController.m */; };
@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C02BECD1AE4D5850031BA27 /* LoopBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoopBack.framework; path = ../../../../Downloads/LoopBack.framework; sourceTree = "<group>"; };
+		2CA620F01AE4E1B500CB195F /* LoopBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoopBack.framework; path = Person/LoopBack.framework; sourceTree = "<group>"; };
 		2CFC78B21AE3E9B000385526 /* Person.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Person.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFC78B61AE3E9B000385526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CFC78B71AE3E9B000385526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C02BECE1AE4D5850031BA27 /* LoopBack.framework in Frameworks */,
+				2CA620F11AE4E1B500CB195F /* LoopBack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +66,7 @@
 		2CFC78A91AE3E9B000385526 = {
 			isa = PBXGroup;
 			children = (
-				2C02BECD1AE4D5850031BA27 /* LoopBack.framework */,
+				2CA620F01AE4E1B500CB195F /* LoopBack.framework */,
 				2CFC78B41AE3E9B000385526 /* Person */,
 				2CFC78CE1AE3E9B000385526 /* PersonTests */,
 				2CFC78B31AE3E9B000385526 /* Products */,
@@ -354,6 +354,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/RYPE/Downloads,
+					"$(PROJECT_DIR)/Person",
 				);
 				INFOPLIST_FILE = Person/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -368,6 +369,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/RYPE/Downloads,
+					"$(PROJECT_DIR)/Person",
 				);
 				INFOPLIST_FILE = Person/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

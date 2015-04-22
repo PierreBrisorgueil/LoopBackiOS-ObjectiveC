@@ -14,6 +14,14 @@
 
 @implementation AppDelegate
 
+static LBRESTAdapter * _adapter = nil;
++ (LBRESTAdapter *) adapter
+{
+    if ( !_adapter)
+        _adapter = [LBRESTAdapter adapterWithURL:[NSURL URLWithString:@"http://localhost:3000/api/"]];
+    return _adapter;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;

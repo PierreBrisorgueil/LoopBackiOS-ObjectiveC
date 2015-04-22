@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <LoopBack/LoopBack.h>
-
+#import "AppDelegate.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) LBRESTAdapter *adapter;
@@ -24,12 +23,6 @@
     return _tableData;
 };
 
-- (LBRESTAdapter *) adapter
-{
-    if( !_adapter)
-        _adapter = [LBRESTAdapter adapterWithURL:[NSURL URLWithString:@"http://localhost:3000/api"]];
-    return _adapter;
-}
 
 /*************************************************/
 // Functions
@@ -38,8 +31,8 @@
 - (void) getPerson {
     
     void (^loadSuccessBlock)(NSArray *) = ^(NSArray *models) {
-        NSLog( @"selfSuccessBlock %lu", models.count);
-        NSLog(@"Success on Static Method result: %@", models);
+        //NSLog( @"selfSuccessBlock %lu", models.count);
+        //NSLog(@"Success on Static Method result: %@", models);
         
         [self.tableData removeAllObjects ];
         
@@ -55,7 +48,7 @@
     };
     
 
-    LBModelRepository *prototype = [ [self adapter]  repositoryWithModelName:@"people"];
+    LBModelRepository *prototype = [ [AppDelegate adapter]  repositoryWithModelName:@"people"];
     [prototype allWithSuccess: loadSuccessBlock failure: loadErrorBlock];
 
 };
@@ -94,7 +87,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // put top margin UITableViewController without a UINavigationController consequence ;)
-    self.tableView.contentInset = UIEdgeInsetsMake(20.0f, 0.0f, 0.0f, 0.0f);
+    // self.tableView.contentInset = UIEdgeInsetsMake(20.0f, 0.0f, 0.0f, 0.0f);
     // init data
     [self getPerson];
 }
@@ -109,6 +102,12 @@
 - (IBAction)actionGetPerson:(id)sender {
     [self getPerson];
 }
+
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue {
+    NSLog(@"Back to list");
+    [self getPerson];
+}
+
 
 // Table View
 /**************************************/

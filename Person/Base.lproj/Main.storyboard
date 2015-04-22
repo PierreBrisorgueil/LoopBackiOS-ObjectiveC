@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0KA-xu-DCI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Person collection-->
+        <!--PersonsCollection-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="Person collection" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="PersonsCollection" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -34,8 +34,8 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="6Mm-Tf-eJW"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqS-dk-6Rq">
-                                <rect key="frame" x="256" y="531" width="89" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqS-dk-6Rq">
+                                <rect key="frame" x="256" y="528" width="89" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="MeY-6d-3xx"/>
                                 </constraints>
@@ -57,6 +57,13 @@
                             <constraint firstItem="PqS-dk-6Rq" firstAttribute="top" secondItem="GoT-dX-Ad2" secondAttribute="bottom" constant="27" id="t8P-8o-WC7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="PersonsCollection" id="j9b-O0-nlM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jpT-hn-u3O">
+                            <connections>
+                                <segue destination="5cT-oR-Q3c" kind="show" id="yiA-PV-LKn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="myTable" destination="GoT-dX-Ad2" id="lRx-Q6-ypy"/>
                         <outlet property="tableView" destination="GoT-dX-Ad2" id="eAA-Br-O5b"/>
@@ -64,6 +71,106 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1171" y="397"/>
+        </scene>
+        <!--AddPerson-->
+        <scene sceneID="mNc-2h-65M">
+            <objects>
+                <viewController title="AddPerson" id="qbA-OE-ukc" customClass="AddNewPersonViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zyW-he-7IV"/>
+                        <viewControllerLayoutGuide type="bottom" id="fa3-j5-Uqs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Q7-Zw-2sB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="firstname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oDD-KX-hlw">
+                                <rect key="frame" x="16" y="94" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DPh-6K-Zuf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aMR-jM-HYh">
+                                <rect key="frame" x="16" y="154" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hm5-BB-8Ho"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="oDD-KX-hlw" secondAttribute="centerX" id="Arl-CL-Hfw"/>
+                            <constraint firstItem="aMR-jM-HYh" firstAttribute="top" secondItem="oDD-KX-hlw" secondAttribute="bottom" constant="30" id="KFd-mI-mXG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aMR-jM-HYh" secondAttribute="trailing" id="SKa-ja-Ngu"/>
+                            <constraint firstItem="oDD-KX-hlw" firstAttribute="leading" secondItem="3Q7-Zw-2sB" secondAttribute="leadingMargin" id="W5e-Zj-Dxu"/>
+                            <constraint firstItem="aMR-jM-HYh" firstAttribute="leading" secondItem="3Q7-Zw-2sB" secondAttribute="leadingMargin" id="Yv0-3q-HEM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oDD-KX-hlw" secondAttribute="trailing" id="eRV-9H-76s"/>
+                            <constraint firstItem="oDD-KX-hlw" firstAttribute="top" secondItem="zyW-he-7IV" secondAttribute="bottom" constant="30" id="tSz-Xo-1Ru"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AddPerson" id="rVQ-Ba-dzF">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Ewl-vq-knv">
+                            <connections>
+                                <segue destination="n17-B6-YkM" kind="unwind" unwindAction="unwindToList:" id="vZx-GK-rBG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="n5V-Iq-9Ux">
+                            <connections>
+                                <segue destination="n17-B6-YkM" kind="unwind" unwindAction="unwindToList:" id="v3Q-av-rrW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="n5V-Iq-9Ux" id="gDh-a2-E4e"/>
+                        <outlet property="firstnameField" destination="oDD-KX-hlw" id="QkH-6Z-8MS"/>
+                        <outlet property="mailField" destination="aMR-jM-HYh" id="wDZ-Q9-DBc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wed-yq-3Gc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="n17-B6-YkM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2740" y="397"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9tN-fG-zGe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0KA-xu-DCI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L8P-KX-3Yv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Wb6-Td-AkY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="foR-Ts-yCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="332" y="397"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tNw-ho-HmR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5cT-oR-Q3c" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DcB-69-IKJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qbA-OE-ukc" kind="relationship" relationship="rootViewController" id="Edi-Ds-5dX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJ9-P4-ElG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="397"/>
         </scene>
     </scenes>
 </document>

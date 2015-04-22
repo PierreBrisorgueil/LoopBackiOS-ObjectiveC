@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C7D19C51AE5A46E008E8CA3 /* AddNewPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D19C41AE5A46E008E8CA3 /* AddNewPersonViewController.m */; };
 		2CA620F11AE4E1B500CB195F /* LoopBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA620F01AE4E1B500CB195F /* LoopBack.framework */; };
 		2CFC78B81AE3E9B000385526 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC78B71AE3E9B000385526 /* main.m */; };
 		2CFC78BB1AE3E9B000385526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC78BA1AE3E9B000385526 /* AppDelegate.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C7D19C31AE5A46E008E8CA3 /* AddNewPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewPersonViewController.h; sourceTree = "<group>"; };
+		2C7D19C41AE5A46E008E8CA3 /* AddNewPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewPersonViewController.m; sourceTree = "<group>"; };
 		2CA620F01AE4E1B500CB195F /* LoopBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoopBack.framework; path = Person/LoopBack.framework; sourceTree = "<group>"; };
 		2CFC78B21AE3E9B000385526 /* Person.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Person.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFC78B61AE3E9B000385526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				2CFC78BA1AE3E9B000385526 /* AppDelegate.m */,
 				2CFC78BC1AE3E9B000385526 /* ViewController.h */,
 				2CFC78BD1AE3E9B000385526 /* ViewController.m */,
+				2C7D19C31AE5A46E008E8CA3 /* AddNewPersonViewController.h */,
+				2C7D19C41AE5A46E008E8CA3 /* AddNewPersonViewController.m */,
 				2CFC78BF1AE3E9B000385526 /* Main.storyboard */,
 				2CFC78C21AE3E9B000385526 /* Images.xcassets */,
 				2CFC78C41AE3E9B000385526 /* LaunchScreen.xib */,
@@ -223,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C7D19C51AE5A46E008E8CA3 /* AddNewPersonViewController.m in Sources */,
 				2CFC78BE1AE3E9B000385526 /* ViewController.m in Sources */,
 				2CFC78BB1AE3E9B000385526 /* AppDelegate.m in Sources */,
 				2CFC78B81AE3E9B000385526 /* main.m in Sources */,
@@ -351,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/RYPE/Downloads,
@@ -359,6 +366,8 @@
 				INFOPLIST_FILE = Person/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Person/Person-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -366,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/RYPE/Downloads,
@@ -374,6 +384,7 @@
 				INFOPLIST_FILE = Person/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Person/Person-Bridging-Header.h";
 			};
 			name = Release;
 		};
